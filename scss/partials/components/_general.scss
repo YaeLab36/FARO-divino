@@ -1,0 +1,215 @@
+.main-index-page {
+  padding: 20px 0;
+}
+
+//hero section
+
+.hero-section {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: $secondary-color;
+  margin-bottom: 40px;
+  }
+
+  h1 {
+    font-size: 3.5rem;
+    color: $dark-color;
+    margin-bottom: 25px;
+  }
+
+  p {
+    max-width: 800px;
+    margin: 0 auto 30px;
+    font-size: 1.2rem;
+    line-height: 1.8;
+  }
+
+  h3 {
+    font-size: 1.8rem;
+    color: $dark-color;
+    margin-bottom: 30px;
+  }
+
+
+.hero-image {
+  max-width: 300px;   // 👈 CLAVE
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 30px auto 0;
+}
+
+//quotes
+.quotes-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  gap: 30px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.quote-card {
+  @extend %card-base;
+  padding: 25px;
+  text-align: center;
+  flex: 1 1 300px;
+  min-width: 280px;
+  display: flex;
+  flex-direction: column;
+
+  p {
+    font-style: italic;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    color: #555;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    color: $primary-color;
+    margin-top: auto;
+  }
+}
+
+//cards
+
+.emociones-grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 20px;
+  padding: 30px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.card-emocion {
+  @extend %card-base;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  height: 100%;
+
+  .card-img-top {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+
+  .card-body {
+    padding: 1.5rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .text-body-secondary {
+    font-size: 0.85rem;
+    margin-top: auto;
+  }
+}
+
+.card-image-wrapper {
+  background-color: $light-bg;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
+
+  img {
+    max-width: 80px;
+    max-height: 80px;
+    object-fit: contain;
+  }
+}
+
+//videos
+
+.video-grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  padding: 30px;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.video-item {
+  @extend %card-base;
+  @extend %flex-center;
+}
+
+
+.video-responsive {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  width: 100%;
+
+  iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+}
+
+//contacto
+
+.contact-hero {
+  background-color: $light-bg;
+  padding: 60px 20px;
+  margin-bottom: 50px;
+  border-bottom: 1px solid #eee;
+
+  h1 {
+    font-size: 3.2rem;
+    margin-bottom: 25px;
+    color: $dark-color;
+  }
+
+  p {
+    max-width: 700px;
+    margin: 0 auto 15px;
+    font-size: 1.15rem;
+    line-height: 1.7;
+  }
+}
+
+.contact-form-section {
+  @extend %card-base;
+  padding: 40px;
+  margin-bottom: 50px;
+
+  h2 {
+    font-size: 2.5rem;
+    color: $primary-color;
+    margin-bottom: 35px;
+  }
+}
+
+
+//responsive
+
+@include tablet {
+  .hero-section h1 { font-size: 3rem; }
+  .hero-image { max-width: 200px; }
+  .video-grid-container { grid-template-columns: 1fr; }
+}
+
+@include mobile {
+  .hero-section {
+    padding: 30px 15px;
+
+    h1 { font-size: 2.5rem; }
+  }
+
+  .hero-image { max-width: 150px; }
+  .video-grid-container { grid-template-columns: 1fr; }
+}
+

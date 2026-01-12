@@ -1,7 +1,20 @@
 body {
-    font-family: Arial, sans-serif;
+  background-color: #bcb6bc;
+  font-family: Arial, sans-serif;
 }
 
-.nav-link {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    }
+h1 {
+  font-family: $font-title;
+  font-size: 3rem;
+  color: $dark-color;
+  text-align: center;
+}
+
+h2 {
+  font-family: $font-title;
+}
+
+p {
+  font-family: $font-text;
+  font-size: 1.1rem;
+}
