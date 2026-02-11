@@ -1,5 +1,6 @@
 
-/* ---------- EMOCIONES ---------- */
+
+
 const mensajes = {
   ansioso: "Por tanto, no tengan miedo, pues yo soy su Dios y estoy con ustedes. Mi mano victoriosa les dará fuerza y ayuda; mi mano victoriosa siempre les dará su apoyo. Isaías 41:10",
   triste: "Estén siempre contentos. Oren en todo momento. Den gracias a Dios en cualquier circunstancia. Esto es lo que Dios espera de ustedes, como cristianos que son. 1 Tesalonisenses 5:16-18",
@@ -33,23 +34,23 @@ if (mensaje) {
   }
 }
 
-/* ---------- TESTIMONIOS ---------- */
+/*  TESTIMONIOS */
 
 
 const formTestimonio = document.getElementById("form-testimonio");
 const historialTestimonios = document.getElementById("historial-testimonios");
 
-// Traemos lo guardado en localStorage o empezamos vacío
+// Traemos lo guardado en localStorage 
 let testimonios = JSON.parse(localStorage.getItem("testimonios")) || [];
 
 
-// Función para renderizar testimonios
+
 
 
 
 function renderizarTestimonios() {
     if (!historialTestimonios) return; 
-    // ↑ evita errores si no estamos en Testimonios.html
+    
 
     historialTestimonios.innerHTML = "";
 
@@ -66,7 +67,7 @@ function renderizarTestimonios() {
     });
 }
 
-/*===== EVENTO SUBMIT =====*/
+/*EVENTO SUBMIT */
 
 if (formTestimonio) {
     formTestimonio.addEventListener("submit", (e) => {
