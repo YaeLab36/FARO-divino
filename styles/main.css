@@ -1,3 +1,5 @@
+
+
 .contact-form-section, .video-item, .card-emocion, .quote-card {
   border-radius: 8px;
   background-color: #fff;
@@ -367,4 +369,113 @@ h3 {
   .footer-text {
     font-size: 0.8rem;
   }
+
+  
+
+/* ===== EMOCIONES ===== */
+.emociones {
+  padding: 3rem 1rem;
+  text-align: center;
+  min-height: 80vh; /* centra verticalmente si querés */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #f4f0ec;
+}
+
+.emociones-titulo {
+  margin-bottom: 2.5rem;
+  font-family: "Cinzel", serif;
+  font-size: 2.2rem;
+  color: #aa3d01;
+}
+
+/* BOTONES */
+.emociones-botones {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.emocion-btn {
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  border-radius: 30px;
+  background-color: #212529;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  cursor: pointer;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.emocion-btn:hover {
+  background-color: #f1c40f;
+  color: #212529;
+  transform: scale(1.1);
+}
+
+/* CARD DEL MENSAJE */
+.mensaje-card {
+  display: none; /* inicialmente oculta */
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem 2.5rem;
+  border-radius: 20px;
+  background: linear-gradient(145deg, #fff8e7, #ffe4b5);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.15rem;
+  line-height: 1.8;
+  text-align: center;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+/* Clase que activa la animación */
+.mensaje-card.show {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.historial-testimonios {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 700px;
+    margin: 0 auto 3rem;
+}
+
+.testimonio-card {
+    background-color: #fff8e7;
+    padding: 1.5rem 2rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    text-align: left;
+    transition: transform 0.3s ease;
+}
+
+.testimonio-card:hover {
+    transform: translateY(-5px);
+}
+
+.testimonio-card h4 {
+    margin-bottom: 0.5rem;
+    color: #aa3d01;
+}
+
+.testimonio-card p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+
+
+
 }/*# sourceMappingURL=main.css.map */
